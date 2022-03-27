@@ -5,8 +5,8 @@ import numpy as np
 import pygame
 
 # Surface size (preferably a square)
-WIN_WIDTH = 500
-WIN_HEIGHT = 500
+WIN_WIDTH = 300
+WIN_HEIGHT = 300
 
 # Cell size (preferably a square)
 CELL_WIDTH = 20
@@ -60,7 +60,7 @@ pygame.init()
 WINDOW_SIZE = [WIN_WIDTH, WIN_HEIGHT]
 screen = pygame.display.set_mode(WINDOW_SIZE)
  
-pygame.display.set_caption("Grille Pygame")
+pygame.display.set_caption("Random Grid")
 
 clock = pygame.time.Clock()
  
