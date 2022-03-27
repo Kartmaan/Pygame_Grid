@@ -90,7 +90,7 @@ while run:
                 else:
                     grid[row][column] = 0 # White cell
             
-            if pygame.mouse.get_pressed()[2]: # Roght click
+            if pygame.mouse.get_pressed()[2]: # Right click
                 if random_anim == False:
                     random_anim = True
                     print("\nRANDOMIZOR ON\n")
@@ -117,9 +117,12 @@ while run:
                             CELL_HEIGHT])
 
     if random_anim:
+        # Choose a random grid coordinates
         x = random.randint(0, cells_in_row-1)
         y = random.randint(0, cells_in_row-1)
 
+        # If the cell is white (0) it becomes black (1)
+        # If the celle is black (1) it becomes white (0)
         if grid[x][y] == 1:
             grid[x][y] = 0
         else:
@@ -127,10 +130,10 @@ while run:
 
         time.sleep(anim_speed)
 
-    # Limite de 60 FPS
+    # Set the FPS
     clock.tick(fps)
  
-    # Mise à jour de l'affichage
+    # Update display
     pygame.display.flip()
  
 pygame.quit()
